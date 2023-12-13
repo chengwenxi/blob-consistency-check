@@ -199,8 +199,9 @@ fn test_random_blob_consistency_check_mock() {
         utils::{decompose_biguint, fe_to_biguint},
     };
     use poseidon_native::Poseidon;
+    use bls12_381::Scalar;
 
-    type BlobField = Fq;
+    type BlobField = Scalar;
 
     // create a random input
     let input = CircuitInput::<Fr, BlobField>::random();
