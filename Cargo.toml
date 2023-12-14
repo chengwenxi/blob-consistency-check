@@ -7,17 +7,17 @@ edition = "2021"
 
 [dependencies]
 halo2-base = {default-features = false, features = [
-    "halo2-axiom",
+    "halo2-pse",
     "display",
-], git = "https://github.com/axiom-crypto/halo2-lib.git", tag="v0.3.0-ce"}
+], git = "https://github.com/chengwenxi/halo2-lib.git", branch="0.3.0-ce"}
 
 halo2-ecc = {default-features = false, features = [
-    "halo2-axiom",
+    "halo2-pse",
     "display",
-], git = "https://github.com/axiom-crypto/halo2-lib.git", tag="v0.3.0-ce"}
+], git = "https://github.com/chengwenxi/halo2-lib.git", branch="0.3.0-ce"}
 
 bls12_381 = { git = "https://github.com/chengwenxi/bls12_381.git", branch = "eip4844" }
-poseidon = {git = "https://github.com/axiom-crypto/halo2-lib.git", tag="v0.3.0-ce", package="poseidon"}
+poseidon = {git = "https://github.com/chengwenxi/halo2-lib.git", branch="0.3.0-ce", package="poseidon"}
 
 rand = "0.8"
 serde = { version = "=1.0", default-features = false, features = ["derive"] }
