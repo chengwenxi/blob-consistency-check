@@ -7,7 +7,8 @@ use halo2_base::{
     gates::builder::{GateThreadBuilder, RangeWithInstanceCircuitBuilder},
     AssignedValue, halo2_proofs::{poly::kzg::{commitment::{ParamsKZG, KZGCommitmentScheme}, multiopen::ProverSHPLONK}, plonk::{keygen_vk, keygen_pk, create_proof as halo2_create_proof}, transcript::{Blake2bWrite, Challenge255, TranscriptWriterBuffer}, halo2curves::bn256::G1Affine},
 };
-use halo2_base::halo2_proofs::halo2curves::bn256::{Fq, Fr, Bn256};
+use halo2_base::halo2_proofs::halo2curves::bn256::{Fr, Bn256};
+use bls12_381::Scalar as Fq;
 use rand::rngs::OsRng;
 
 const BENCH_SAMPLES: usize = 10;

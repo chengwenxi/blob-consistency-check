@@ -1,5 +1,5 @@
 use blob_consistency_check::*;
-use halo2_base::halo2_proofs::halo2curves::bn256::{Fq, Fr};
+use halo2_base::halo2_proofs::halo2curves::bn256::Fr;
 
 use std::env::set_var;
 use halo2_base::halo2_proofs::dev::MockProver;
@@ -7,6 +7,7 @@ use halo2_base::{
     gates::builder::{GateThreadBuilder, RangeWithInstanceCircuitBuilder},
     AssignedValue,
 };
+use bls12_381::Scalar as Fq;
 
 fn main() {
     // The BlobField should be changed to BLS12-381 Scalar Field.
